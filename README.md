@@ -25,7 +25,7 @@ One more time, the FastAPI [documentation](https://fastapi.tiangolo.com/advanced
 
 You can check the code to implement a router here:
 
-```
+``` Python
 class CustomRoute(APIRoute):
      ''' This will capture the original route and change its header before processing it at the endpoint
      '''
