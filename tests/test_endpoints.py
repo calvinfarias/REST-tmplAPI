@@ -10,7 +10,7 @@ def test_endpoint_dummy():
     response = client.get('/dummy')
 
     assert response.status_code == 200
-    assert response.json() == {'injected-header': 'this is a header value injected within a custom route handler'}
+    assert response.json() == {'inserted-header': 'this value was inserted within a custom route handler'}
 
 def test_endpoint_foo():
     ''' This will execute all the endpoint foo's tests
@@ -18,5 +18,5 @@ def test_endpoint_foo():
     response = client.get('/foo')
 
     assert response.status_code == 200
-    assert response.headers['injected-header'] == 'this is a header value injected at the endpoint processing'
+    assert response.headers['inserted-header'] == 'this value was inserted at the endpoint processing'
     assert response.json() == {'foo': 'bar'}

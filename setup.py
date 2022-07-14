@@ -2,7 +2,7 @@ import setuptools
 from api import VERSION
 
 setuptools.setup(
-    name='RESTAPI1stTMPL',
+    name='tmplAPI',
     version=VERSION,
     url="https://github.com/calvinfarias/RESTAPI1stTMPL",
     description="A simple REST API that implements a a request header's modification template",

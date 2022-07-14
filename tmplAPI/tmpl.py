@@ -12,7 +12,7 @@ class CustomRoute(APIRoute):
 
         async def custom_route_handler(request: Request) -> Response:
 
-            injected_header: Tuple[bytes] = b'injected-header', b'this is a header value injected within a custom route handler'
+            injected_header: Tuple[bytes] = b'inserted-header', b'this value was inserted within a custom route handler'
 
             request.headers.__dict__['_list'].append(injected_header)
 
@@ -25,12 +25,12 @@ app.router.route_class = CustomRoute
 
 @app.get('/dummy')
 async def dummy(request: Request):
-    content = {'injected-header': request.headers['injected-header']}
+    content = {'inserted-header': request.headers['inserted-header']}
     return content
 
 @app.get('/foo')
 async def foo():
     content = {'foo': 'bar'}
-    headers = {'injected-header': 'this is a header value injected at the endpoint processing'}
+    headers = {'inserted-header': 'this value was inserted at the endpoint processing'}
     return JSONResponse(content=content, headers=headers)
 
