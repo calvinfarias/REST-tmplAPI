@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Request, Response
 from fastapi.routing import APIRoute
+from fastapi.responses import JSONResponse
 
 from typing import Callable
 
@@ -28,7 +29,8 @@ async def dummy(request: Request):
     return content
 
 @app.get('/foo')
-async def foo(request: Request):
-    content = {'foo': 'bar', 'injected-header': request.headers['injected-header']}
-    return content
+async def foo():
+    content = {'foo': 'bar'}
+    headers = {'injected-header': 'this is a header value injected at the endpoint processing'}
+    return JSONResponse(content=content, headers=headers)
 

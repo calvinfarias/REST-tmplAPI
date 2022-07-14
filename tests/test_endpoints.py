@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 
-from api.tmplapi import app
+from api.tmpl import app
 
 client = TestClient(app)
 
@@ -18,7 +18,5 @@ def test_endpoint_foo():
     response = client.get('/foo')
 
     assert response.status_code == 200
-    assert response.json() == {
-            'foo': 'bar',
-            'injected-header': 'this is a header value injected within a custom route handler'
-    }
+    assert response.headers['injected-header'] == 'this is a header value injected at the endpoint processing'
+    assert response.json() == {'foo': 'bar'}
