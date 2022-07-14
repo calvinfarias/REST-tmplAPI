@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 
-from api.tmpl import app
+from tmplAPI.tmpl import app
 
 client = TestClient(app)
 
