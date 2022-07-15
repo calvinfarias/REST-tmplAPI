@@ -2,8 +2,18 @@
 This is a REST API template project. The only requirement is that it must have an endpoint that inserts an arbitrary `key: value` pair over a request's header. It's unclear if it's in the Response's header or the Request's header, even though it is intuitive to assume it's the former.
 
 ### INSTALLING
+You can install it by running 
+``` bash
+pip install git+https://github.com/calvinfarias/REST-tmplAPI
+```
 
 ### USING
+``` Python
+import uvicorn
+from tmplAPI.tmpl import app
+
+uvicorn.run(app, host='0.0.0.0', port=8000, reload=False)
+```
 
 ### APPROACH
 
