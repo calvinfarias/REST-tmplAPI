@@ -19,7 +19,11 @@ uvicorn.run(app, host='0.0.0.0', port=8000, reload=False)
 ```
 
 ### TESTING
-
+You can check if everything is properly installed by moving into the test directory and running `pytest`
+``` bash
+cd venv/lib/python3.8/site-packages/tmplAPI/tests/
+pytest
+``` 
 
 ### APPROACH
 Implement an API following the FastAPI [documentation](https://fastapi.tiangolo.com/); create an arbitrary endpoint and then insert the `key: value` pair on the header. 
