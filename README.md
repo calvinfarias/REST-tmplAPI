@@ -6,7 +6,7 @@ You can install it by running
 ``` bash
 python -m venv venv && source venv/bin/activate
 
-pip install git+https://github.com/calvinfarias/REST-tmplAPI```
+pip install git+https://github.com/calvinfarias/REST-tmplAPI
 ```
 
 ### USING
