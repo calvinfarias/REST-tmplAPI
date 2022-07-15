@@ -1,6 +1,6 @@
 # REST tmplAPI
 [![License](https://img.shields.io/badge/license-MIT-black.svg)](../master/LICENSE)
-[![Language](https://img.shields.io/badge/language-Python-blue.svg)
+[![Language](https://img.shields.io/badge/language-Python-blue.svg)]
 
 This is a REST API template project for a specific task. The only requirement is that it must have an endpoint that inserts an arbitrary `key: value` pair over a request's header. It's unclear if it's in the Response's header or the Request's header, even though it is intuitive to assume it's the former.
 
