@@ -1,5 +1,10 @@
 # REST tmplAPI
+<<<<<<< HEAD
 This is a REST API template project. The only requirement is that it must have an endpoint that inserts an arbitrary `key: value` pair over a request's header. It's unclear if it's in the Response's header or the Request's header, even though it is intuitive to assume it's the former.
+=======
+This is a REST API template project for solving a specific task. The only requirement is that it must have an endpoint that inserts an arbitrary `key: value` pair over a request's header. It's not clear if it's in the Response's header or in the Request's header, even though it is intuitive to assume the right one is the Response's.
+
+>>>>>>> 7e098684e361db77d0291c5c81592c8cf01c5e5b
 
 
 ### INSTALLING
