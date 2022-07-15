@@ -1,5 +1,5 @@
 # REST tmplAPI
-This is a REST API template project. The only requirement is that it must have an endpoint that inserts an arbitrary `key: value` pair over a request's header. It's unclear if it's in the Response's header or the Request's header, even though it is intuitive to assume it's the former.
+This is a REST API template project for an specific task. The only requirement is that it must have an endpoint that inserts an arbitrary `key: value` pair over a request's header. It's unclear if it's in the Response's header or the Request's header, even though it is intuitive to assume it's the former.
 
 ### INSTALLING
 You can install it by running 
@@ -17,6 +17,9 @@ import uvicorn
 
 uvicorn.run(app, host='0.0.0.0', port=8000, reload=False)
 ```
+
+### TESTING
+
 
 ### APPROACH
 Implement an API following the FastAPI [documentation](https://fastapi.tiangolo.com/); create an arbitrary endpoint and then insert the `key: value` pair on the header. 
