@@ -4,8 +4,9 @@
 [![License](https://img.shields.io/badge/license-MIT-black.svg)](../master/LICENSE)
 ![Language](https://img.shields.io/badge/language-Python-blue.svg)
 
-This is a REST API template for a specific task. The only requirement is that it must have an endpoint that inserts an arbitrary `key: value` pair over a request's header. It's unclear if it's in the Response's header or the Request's header, even though it is intuitive to assume it's the former.
+This is a REST API made for a specific task. The only requirement is that it must have an endpoint that inserts an arbitrary `key: value` pair over a request's header. It's unclear if it's in the Response's header or the Request's header, even though it is intuitive to assume it's the former.
 
+This repository will remain as a template for future references / FastAPI developments.
 
 
 ### INSTALLING
@@ -79,9 +80,9 @@ The first endpoint is `GET /foo`. It will return a Response in the JSON format w
 
 The second endpoint is `GET /dummy`. It will receive the Request as parameter and return the content read from the Request.headers as `{'inserted-header': 'this value was inserted within a custom route handler'}`
 
-One more time, the FastAPI [documentation](https://fastapi.tiangolo.com/advanced/custom-request-and-route/) describes the steps needed to solve the problem. In this case it explain how to build a router that will capture the Request before it is processed at the endpoint. This allows one to change its headers.
+The FastAPI [documentation](https://fastapi.tiangolo.com/advanced/custom-request-and-route/) describes the steps needed to solve the problem. In this case it explain how to build a router that will capture the Request before it is processed at the endpoint. This allows one to change its headers.
 
-You can check the code to implement a router here:
+You can check the class that implements a custom router below:
 
 ``` Python
 class CustomRoute(APIRoute):
